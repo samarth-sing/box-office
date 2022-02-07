@@ -6,7 +6,7 @@ import { FlexGrid } from '../styled';
 import IMAGE_NOT_FOUND from '../../images/not-found.jfif';
 import { useShows } from '../../misc/custom-hooks';
 
-const showGrid = ({ data }) => {
+const ShowGrid = ({ data }) => {
   const [starredShows, dispatchStarred] = useShows();
 
   return (
@@ -38,4 +38,4 @@ const showGrid = ({ data }) => {
   );
 };
 
-export default showGrid;
+export default ShowGrid;

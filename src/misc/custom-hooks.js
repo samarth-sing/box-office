@@ -1,5 +1,5 @@
 import { useReducer, useEffect, useState } from 'react';
-import apiGet from './config';
+import { apiGet } from './config';
 
 function showReducer(prevState, action) {
   switch (action.type) {
@@ -31,7 +31,7 @@ function usePersistedReducer(reducer, initialState, key) {
 }
 
 export function useShows(key = 'shows') {
-  usePersistedReducer(showReducer, [], key);
+  return usePersistedReducer(showReducer, [], key);
 }
 
 export function useLastQuery(key = 'lastQuery') {

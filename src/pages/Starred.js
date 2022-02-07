@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MainPageLayout from '../components/MainPageLayout';
 import { useShows } from '../misc/custom-hooks';
 import { apiGet } from '../misc/config';
-import showGrid from '../components/show/ShowGrid';
+import ShowGrid from '../components/show/ShowGrid';
 
 const Starred = () => {
   const [starred] = useShows();
@@ -35,7 +35,7 @@ const Starred = () => {
       {isLoading && <div>Shows are still loading</div>}
       {error && <div>Error occured: {error}</div>}
       {!isLoading && !shows && <div>No shows were added</div>}
-      {!isLoading && !error && shows && <showGrid data={shows} />}
+      {!isLoading && !error && shows && <ShowGrid data={shows} />}
     </MainPageLayout>
   );
 };
